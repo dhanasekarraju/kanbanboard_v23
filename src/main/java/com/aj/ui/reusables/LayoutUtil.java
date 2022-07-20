@@ -1,0 +1,28 @@
+package com.aj.ui.reusables;
+
+import com.vaadin.flow.component.orderedlayout.FlexLayout;
+import com.vaadin.flow.component.orderedlayout.FlexLayout.ContentAlignment;
+import com.vaadin.flow.component.orderedlayout.FlexLayout.FlexDirection;
+import com.vaadin.flow.component.orderedlayout.FlexLayout.FlexWrap;
+
+public class LayoutUtil {
+
+	
+	public static FlexLayout getFlexVerticalLayout(boolean wrap) {
+		FlexLayout flexLayout = new FlexLayout();
+		flexLayout.setWidthFull();
+		flexLayout.setFlexDirection(FlexDirection.COLUMN);
+		flexLayout.setFlexWrap(wrap ? FlexWrap.WRAP : FlexWrap.NOWRAP);
+		flexLayout.setAlignContent(ContentAlignment.CENTER);
+		return flexLayout;
+	}
+
+	public static FlexLayout getFlexHorizontalLayout(boolean wrap) {
+		FlexLayout flexLayout = new FlexLayout();
+		flexLayout.setWidthFull();
+		flexLayout.setFlexDirection(FlexDirection.ROW);
+		flexLayout.setFlexWrap(wrap ? FlexWrap.WRAP : FlexWrap.NOWRAP);
+		flexLayout.setAlignContent(ContentAlignment.START);
+		return flexLayout;
+	}
+}
